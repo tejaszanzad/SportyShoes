@@ -1,0 +1,24 @@
+<div>
+    <div class="header">
+        <div class="cartCotainer">
+            <app-cart></app-cart>
+        </div>
+    </div>
+</div>
+<div class="products">
+    <div class="productsearch" >
+        <div class="search"><input type="text" (keypress)=" searchProductByName($event,mytext.value)" #mytext placeholder="Search Product"><div class="glyphicon glyphicon-search" ></div></div>
+    </div>
+   <br><br> 
+    
+    <div class="content">
+        <div class="advancefilter">
+            <app-advanced-filter (doFilterEvent)="filterProducts($event)"></app-advanced-filter>
+        </div>
+        <div class="productscart">
+            <div *ngFor="let product of tempProducts" class="carts">
+             <app-product-cart [productDetails]="product" ></app-product-cart>
+            </div>
+        </div>
+    </div>
+</div>

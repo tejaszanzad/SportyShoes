@@ -1,0 +1,21 @@
+.cartIconContainer{
+    cursor: pointer;
+}
+.cartIconContainer > .totalProduct{
+    padding-left: 5px;
+}
+.cartDropDown{
+    position: absolute;
+    right: 15px;
+    top: 39px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 1px 20px 12px 10px #ccc;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+.cartDropDown > ul{
+    list-style: none;
+    padding: 0px 10px;
+}
+    

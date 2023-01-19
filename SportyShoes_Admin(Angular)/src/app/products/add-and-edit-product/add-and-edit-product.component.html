@@ -1,0 +1,16 @@
+<label>Add Product</label> :
+<div>
+        ProductName : <input type="text" [(ngModel)]="product.productName">
+        Price : <input type="number" [(ngModel)]="product.price">
+        Qty : <input type="number" [(ngModel)]="product.qty" >
+        Brand : 
+        <select [(ngModel)]="product.brandId">
+            <option value="default">Select Brand</option>
+    <option *ngFor="let brand of brands" [value]="brand.brandId">
+        {{brand.brandName}}
+    </option>
+        </select>
+       : <button (click)="addProduct()">Add</button>
+</div>
+
+

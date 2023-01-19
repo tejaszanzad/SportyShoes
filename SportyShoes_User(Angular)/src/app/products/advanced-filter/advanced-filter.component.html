@@ -1,0 +1,13 @@
+<div class="filter">
+    <p>Select Brand</p>
+
+<div *ngFor="let brand of brands">
+
+<input type="checkbox" [checked]="brand.checked" (change)="filterProducts(brand.brandId)" >: {{brand.brandName}} <br><br>
+
+</div>
+
+</div>
+
+
+

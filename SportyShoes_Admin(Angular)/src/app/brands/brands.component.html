@@ -1,0 +1,24 @@
+<app-add-and-edit-brand [getBrands]="getBrands"></app-add-and-edit-brand>
+<h3 > Brand Details </h3><br>
+
+<table class="table table-hover">
+    <thead>
+        <th>BrandId</th>
+        <th>BrandName</th>
+        <th>Action</th>
+    </thead>
+    <tbody >
+        <tr *ngFor="let brand of brands">
+            <td>{{brand.brandId}}</td>
+            <td>
+                <span *ngIf="selectedBrandId !== brand.brandId">{{brand.brandName}}</span>
+                <input [ngStyle]="{'display': selectedBrandId === brand.brandId ?'block':'none'}" type="text" #bnameRef value={{brand.brandName}} >
+            </td>
+           <td>
+            <button *ngIf="selectedBrandId !== brand.brandId" (click)="edit(brand.brandId)">Edit</button>
+             <button *ngIf="selectedBrandId === brand.brandId " (click)="update(brand.brandId,bnameRef.value)">Update</button>
+         </td>
+           <td><button (click)="deleteBrand(brand.brandId)">Delete</button></td>
+       </tr>
+    </tbody>
+</table>

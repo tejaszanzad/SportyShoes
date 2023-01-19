@@ -1,0 +1,13 @@
+<div class="cart">
+        <div class="cart-container">
+            <div class="imgContainer">
+                <img src="../../../assets/images/Sports Shoes 2.jpg" width="100px">
+            </div>
+            <div>{{productDetails.productName}}</div>
+            <div>{{productDetails.price}} Rs</div>
+            <div>{{productDetails.brand?.brandName}}</div>
+            <div>In Stock : {{productDetails.qty}}</div>
+            <div >Qty : <input type="number" #qntRef></div> 
+        </div>
+<div class="addtocart"><input type="submit" value="Add To Cart" (click)="addToCart(productDetails, qntRef.value)"></div>
+</div> 

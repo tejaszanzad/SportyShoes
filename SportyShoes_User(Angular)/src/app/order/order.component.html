@@ -1,0 +1,52 @@
+<div style="text-align: center;"><h1>Place Your Order Here</h1></div>
+<br><br>
+
+<div style="text-align: center;"><h3>Order Summary :</h3></div><br>
+<div class="product" >
+        <li *ngFor="let prod of products">{{prod.productName}}, Quantity: {{prod.qnt}}, Price: {{prod.price}}</li>
+</div><br>
+
+<div style="text-align: center;"><label>Total = {{totalAmount}}</label></div>
+<br><br>
+
+<form>
+    <div class="addressContainer">
+        <div class="addressForm" >
+            <div class="row">
+                <label for="">Full Name :</label>
+                <input type="text"><br><br>
+            </div>
+            
+            <div class="row">
+                <label for="">Phone Number :</label>
+                <input type="number"><br><br>
+            </div>
+           
+           
+            <div class="row">
+                <label for="">Email :</label>
+                <input type="email"><br><br>
+            </div>
+
+            <div class="row">
+                <label for="">Gender :</label>
+                <input type="radio" name="gender">MALE 
+                <input type="radio" name="gender">FEMALE 
+                <input type="radio" name="gender">Others
+            </div>
+            <br><br>
+    
+            <div class="row">
+                <label for="" class="floatLeft">Address :</label>
+                <textarea cols="30" rows="5"></textarea>
+            </div>
+            <br><br>
+            
+            <div class="submit"><a routerLink="/payment"><input type="submit" value="Proceed To Payment"></a></div>
+
+    </div>
+</div>
+</form>
+
+
+

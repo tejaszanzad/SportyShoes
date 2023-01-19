@@ -1,0 +1,21 @@
+.cart{
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.cart > .cart-container{
+    padding: 10px;
+    text-align: center;
+}
+
+.cart > .cart-container > .imgContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid #CCC;
+}
+
+.addtocart{
+    text-align: center;
+}

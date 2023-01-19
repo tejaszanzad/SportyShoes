@@ -1,0 +1,27 @@
+.product{
+    text-align: center;
+}
+
+.addressContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.addressContainer .addressForm{
+    width: 350px;
+    text-align: left;
+}
+
+.addressContainer .addressForm > .row >label{
+    width: 125px;
+ 
+}
+
+.floatLeft{
+    float: left;
+}
+
+.submit{
+    text-align: center;
+}

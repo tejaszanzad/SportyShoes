@@ -1,0 +1,60 @@
+.title{
+    text-align: center;
+    color: red;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: right;
+}
+.header .cartCotainer{
+    padding-right:20px ;
+}
+.products .content{
+    display: flex;
+    width: 100%;
+}
+.products .productsearch{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    
+}
+
+.productsearch > .search{
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+}
+.productsearch > .search > input{
+    width: 100%;
+    height: 40px;
+}
+
+
+.productsearch > .search > .glyphicon-search{
+    position: absolute!important;
+    right: 7px;
+    top: 11px;
+}
+
+.productsearch >input{
+    width: 100%;
+    padding: 10px;
+}
+
+.productscart, .advancefilter{
+    padding: 10px;
+    border: 1px solid #CCC;
+}
+
+.advancefilter{
+    width: 200px;
+}
+
+.carts{
+    display: inline-block;
+}
+

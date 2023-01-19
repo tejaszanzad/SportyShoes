@@ -1,0 +1,45 @@
+<label>Add Product</label>:<button (click)="showAddAndEditForm()">Add</button>
+<h3> Product Details </h3><br>
+
+<table class="table table-hover">
+    <thead>
+        <th>ProductId</th>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Qty </th>
+        <th>BrandName</th>
+        <th>Action</th>
+    </thead>
+    <tbody >
+        <tr *ngFor="let prod of products">
+            <td>{{prod.productId}}</td>
+            <td>
+                <span *ngIf="selectedProductId !== prod.productId">{{prod.productName}}</span>
+                <input [ngStyle]="{'display': selectedProductId === prod.productId ?'block':'none'}" type="text" #pnameRef value={{prod.productName}} >
+            </td>
+            <td>
+                <span *ngIf="selectedProductId !== prod.productId">{{prod.price}}</span>
+                <input [ngStyle]="{'display': selectedProductId === prod.productId ?'block':'none'}" type="number" #ppriceRef value={{prod.price}} >
+            </td>
+            <td>
+                <span *ngIf="selectedProductId !== prod.productId">{{prod.qty}}</span>
+                <input [ngStyle]="{'display': selectedProductId === prod.productId ?'block':'none'}" type="number" #pqtyRef value={{prod.qty}} >
+            </td>
+            <td>
+                <span *ngIf="selectedProductId !== prod.productId">{{prod.brand.brandName}}</span>
+                <select [ngStyle]="{'display': selectedProductId === prod.productId ?'block':'none'}" type="text"
+                #bnameRef [value]="prod.brand.brandId" >
+                <option value="default">Select Brand</option>
+                <option *ngFor="let brand of brands" [value]="brand.brandId" [selected]="brand.brandId === prod.brand.brandId">
+                    {{brand.brandName}}
+                </option>
+                </select>
+            </td>
+            <td>
+                <button *ngIf="selectedProductId !== prod.productId" (click)="edit(prod.productId)">Edit</button>
+                <button *ngIf="selectedProductId === prod.productId" (click)="update({productId: prod.productId, productName: pnameRef.value, price: ppriceRef.value,qty: pqtyRef.value, brandId: bnameRef.value})">Update</button>
+            </td>
+            <td><button (click)="deleteProduct(prod.productId)">Delete</button></td>
+         </tr>
+    </tbody>
+</table>
